@@ -33,9 +33,10 @@ uploaded_file = st.file_uploader("📂 Upload Image", type=["jpg", "jpeg", "png"
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image", use_container_width=True)
 
     label, confidence = predict_image(img)
 
     st.markdown(f"### 🔎 Prediction: **{label}**")
     st.write(f"✅ Confidence: {confidence:.4f}")
+
