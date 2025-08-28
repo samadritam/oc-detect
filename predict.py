@@ -19,7 +19,7 @@ def predict_image(img: Image.Image):
     predicted_class = np.argmax(predictions, axis=1)[0]
     confidence = float(np.max(predictions))
 
-    if 0.4 <= confidence <= 0.6:
+    if 0.3 <= confidence <= 0.7:
         label = "DOUBTFUL"
     else:
         label = class_labels[predicted_class]
@@ -39,4 +39,5 @@ if uploaded_file is not None:
 
     st.markdown(f"### 🔎 Prediction: **{label}**")
     st.write(f"✅ Confidence: {confidence:.4f}")
+
 
