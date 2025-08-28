@@ -6,7 +6,7 @@ from PIL import Image
 
 model = tf.keras.models.load_model("oral_cancer_cnn.h5")
 
-class_labels = ["CANCER", "NORMAL"]
+class_labels = ["CANCER", "NON-CANCER"]
 
 def predict_image(img: Image.Image):
     img = img.convert("RGB")
@@ -27,7 +27,7 @@ def predict_image(img: Image.Image):
     return label, confidence
 
 st.title("🦷 Oral Cancer Detection 🦷")
-st.write("Upload an oral cavity image, and the model will predict if it is **Normal**, **Cancer**, or **Doubtful**.")
+st.write("Upload an oral cavity image, and the model will predict if it is **Non-Cancer**, **Cancer**, or **Doubtful**.")
 
 uploaded_file = st.file_uploader("📂 Upload Image", type=["jpg", "jpeg", "png"])
 
@@ -39,6 +39,7 @@ if uploaded_file is not None:
 
     st.markdown(f"### 🔎 Prediction: **{label}**")
     #st.write(f"✅ Confidence: {confidence:.4f}")
+
 
 
 
