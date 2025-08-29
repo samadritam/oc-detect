@@ -27,7 +27,7 @@ def predict_image(img: Image.Image):
     return label, confidence
 
 st.title("🦷 Oral Cancer Detection 🦷")
-st.write("Upload an oral cavity image, and the model will predict if it is **Non-Cancer**, **Cancer**, or **Doubtful**.")
+st.write("Upload an image of oral cavity, and the model will predict if it is **Non-Cancer** or **Cancer**.")
 
 uploaded_file = st.file_uploader("📂 Upload Image", type=["jpg", "jpeg", "png"])
 
@@ -39,6 +39,7 @@ if uploaded_file is not None:
 
     st.markdown(f"### 🔎 Prediction: **{label}**")
     #st.write(f"✅ Confidence: {confidence:.4f}")
+
 
 
 
