@@ -38,7 +38,8 @@ if uploaded_file is not None:
     label, confidence = predict_image(img)
 
     st.markdown(f"### 🔎 Prediction: **{label}**")
-    #st.write(f"✅ Confidence: {confidence:.4f}")
+    st.write(f"✅ Confidence: {confidence:.4f}")
+
 
 
 
