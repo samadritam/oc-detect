@@ -1,4 +1,6 @@
 streamlit
-tensorflow-cpu
-numpy
+fastapi
+uvicorn
+tensorflow
 pillow
+numpy
